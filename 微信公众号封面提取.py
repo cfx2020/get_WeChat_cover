@@ -25,7 +25,6 @@ def parse_page(html):
         img_url = eval(image.group(0).split('=', maxsplit=1)[1])
         title = re.search(r'var msg_title \= \'.*\'', html)
         name = eval(title.group(0).split('=', maxsplit=1)[1])
-        print(img_url)
         return img_url, name
     except:
         print("解析失败")
